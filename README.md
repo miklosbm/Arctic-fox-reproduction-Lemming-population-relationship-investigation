@@ -24,4 +24,30 @@ Reproductive activity of animals is usually difficult to census directly, so res
 <img width="3590" height="790" alt="kép" src="https://github.com/user-attachments/assets/7d891ab7-b624-49d5-bd37-9e5961cdff74" />
 
   4. The number of arctic fox natal dens and the total estimated lemming population were then compared, examining the correlation between the two time series.
+
+  ## Normality Testing
   
+  Before interpreting the correlation results, normality of both variables was 
+  tested using the Shapiro-Wilk test:
+  
+  | Variable | W | p-value | Normal distribution? |
+  |:---|:---:|:---:|:---:|
+  | Lemming population | 0.812 | 0.0004 | No |
+  | Arctic fox natal dens | 0.769 | 0.0001 | No |
+  
+  Both variables significantly deviate from a normal distribution (p < 0.05). 
+  This is expected given the count-based, zero-inflated nature of den activity 
+  data and the boom-bust dynamics of lemming populations. As a result, the 
+  **Spearman correlation is considered the primary, more reliable measure** in 
+  this analysis, while the Pearson correlation is reported alongside it for 
+  comparison.
+  
+  ## Correlation Results
+
+| Comparison | Pearson r | Pearson p | Spearman ρ | Spearman p |
+|:---:|:---:|:---:|:---:|:---:|
+| Same-year (lemming(t) vs. dens(t)) | 0.663 | 0.0003 | 0.752 | <0.0001 |
+| Lagged (lemming(t-1) vs. dens(t)) | 0.109 | 0.6109 | 0.053 | 0.8066 |
+
+Arctic fox natal den activity correlates strongly with lemming population size within the **same year**, but shows no significant relationship with the **previous year's** lemming population. This suggests foxes respond to prey availability within the current breeding season rather than with a one-year delay.
+
