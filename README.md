@@ -17,11 +17,11 @@ Reproductive activity of animals is usually difficult to census directly, so res
   
 <img width="3192" height="790" alt="kép" src="https://github.com/user-attachments/assets/b57578c5-aa72-4adb-affe-8db900cf8a58" />
 
-  4. Based on Berteaux (2020, Nordicana D49), den activity was recorded for each year, which made it possible to count the natal dens per year for both arctic fox and red fox.
+  3. Based on Berteaux (2020, Nordicana D49), den activity was recorded for each year, which made it possible to count the natal dens per year for both arctic fox and red fox.
   
 <img width="2787" height="1989" alt="kép" src="https://github.com/user-attachments/assets/69900704-f3ff-4e30-ab72-cb28dbe48229" />
 
 <img width="3590" height="790" alt="kép" src="https://github.com/user-attachments/assets/7d891ab7-b624-49d5-bd37-9e5961cdff74" />
 
-  5. The number of arctic fox natal dens and the total estimated lemming population were then compared, examining the correlation between the two time series.
+  4. The number of arctic fox natal dens and the total estimated lemming population were then compared, examining the correlation between the two time series.
   
