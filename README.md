@@ -64,6 +64,32 @@ This project is for personal/educational use. The underlying datasets remain sub
   uv run jupyter lab
   ```
 
+## Results
+
+Before interpreting the correlation results, normality of both variables was tested using the Shapiro-Wilk test:
+
+| Variable | W | p-value | Normal distribution? |
+|:---|:---:|:---:|:---:|
+| Lemming population | 0.812 | 0.0004 | No |
+| Arctic fox natal dens | 0.769 | 0.0001 | No |
+
+Merging Arctic fox natal den counts with estimated lemming population density (1995–2019) shows a significant positive correlation:
+
+| Comparison | Pearson r | Pearson p | Spearman ρ | Spearman p |
+|:---:|:---:|:---:|:---:|:---:|
+| Same-year (lemming(t) vs. dens(t)) | 0.663 | 0.0003 | 0.752 | <0.0001 |
+| Lagged (lemming(t-1) vs. dens(t)) | 0.109 | 0.6109 | 0.053 | 0.8066 |
+
+Since both variables failed the Shapiro-Wilk normality test, the Spearman result is the more reliable measure here — and it confirms a strong, statistically significant relationship: years with more lemmings tend to have more active fox natal dens.
+
+A 1-year lag test (checking whether last year's lemming population predicts this year's den activity) showed no meaningful relationship, suggesting fox reproduction responds to the current year's lemming abundance rather than a delayed effect.
+
+Of course, there are many more environmental variables that could be taken into consideration — weather, global warming, disease, and other predators. In some ways, it would be an oversimplification to say that fox reproduction depends heavily on the lemming population alone; however, this project's aim was specifically to verify the relationship between the two. Further work could address these additional factors, including:
+
+1. **Deeper time-series analysis** — a 1-year lag isn't predictive, but lemming cycles are often 3–5 years long, so it's worth testing longer lags, adding a full autocorrelation/cross-correlation (CCF) plot, or fitting a proper time-series model.
+2. **Incorporating climate/weather data** — Arctic lemming crashes are strongly tied to snow cover and winter severity. Pulling in a public climate dataset for Bylot Island could help explain the population swings.
+3. **Predictive modeling** — moving from "is there a correlation" to "can we predict den activity from lemming trends."
+
 ## About
 This project is a data science / data analysis project. The idea behind creating it was that I am really passionate about life sciences and working with data, so I wanted to build something interesting and close to my personality.
 
