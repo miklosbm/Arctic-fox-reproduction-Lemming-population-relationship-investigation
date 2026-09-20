@@ -3,6 +3,55 @@ This study compares Arctic fox reproductive success — estimated from den activ
 ## Citation & Data Sources:
 1. Moisan, Louis; Bideault, Azenor; Gauthier, Gilles et al. (2025). Long-term abundance time-series of the High Arctic terrestrial vertebrate community of Bylot Island, Nunavut [Dataset]. Dryad. https://doi.org/10.5061/dryad.44j0zpcnt
 2. Berteaux, B. 2020. Monitoring of arctic and red fox reproduction on Bylot Island, Nunavut, Canada, v. 1.1. Nordicana D49, doi:10.5885/45594CE-A69880E653314887.
+
+## Repository structure
+## Repository Structure
+
+```
+main/
+├── data/
+│   ├── saved/                                              # Processed/intermediate saved data
+│   ├── BYLOT-community_composition....csv                  # Community composition data (Bylot Island)
+│   ├── BYLOT-species_density_monitoring....csv             # Species density monitoring data (Bylot Island)
+│   ├── MetadataS1.pdf                                       # Supplementary metadata documentation
+│   ├── habitat_type.png                                     # Habitat type reference image/map
+│   ├── nordicanad_arctic_and_red_fox_d....csv (x2)          # Arctic and red fox den monitoring datasets
+│   └── valley_orange_polygon_mask.png                       # Valley polygon mask image
+├── den_monitoring_status.ipynb                              # Notebook: den monitoring status analysis
+├── habitat_area_extraction.ipynb                             # Notebook: habitat area extraction
+├── lemming_population_plot.ipynb                             # Notebook: lemming population visualization
+├── pipeline.ipynb                                             # Main analysis pipeline notebook
+├── pyproject.toml                                             # Python project configuration
+└── uv.lock                                                    # Dependency lock file (uv package manager)
+LICENSE                                                        # Project license
+README.md                                                      # Project overview and documentation
+```
+## How to use/ short description
+
+This project is a data science / data analysis project. The idea behind creating it was that I am really passionate about life sciences and working with data, so I wanted to build something interesting and close to my personality.
+
+The main folder contains every file; directly in it there are four jupyter notebook files, namely:
+
+pipeline.ipynb — main notebook: computes habitat areas, estimates lemming population, correlates it with fox den activity, runs stats.
+den_monitoring_status.ipynb — visualizes fox den status over time and natal den counts per year.
+habitat_area_extraction.ipynb — helper functions to compute habitat area (km²) from the map image. Not run standalone — imported into pipeline.ipynb via import_ipynb.
+lemming_population_plot.ipynb — plots lemming population trend over time, log-scaled.
+Computing order: 1. den_monitoring_status.ipynb, 2. pipeline.ipynb, 3. lemming_population_plot.ipynb
+
+## License
+
+This project is for personal/educational use. The underlying datasets remain subject to their original licenses — see the citations above.
+
+## Environment
+  - Python 3.12+
+  - Managed with [uv](https://docs.astral.sh/uv/)
+  - Find the pyproject.toml and uv.lock files in the main folder
+### Setup
+  ```bash
+  uv sync
+  uv run jupyter lab
+  ```
+
 ## About
 This project is a data science / data analysis project. The idea behind creating it was that I am really passionate about life sciences and working with data, so I wanted to build something interesting and close to my personality.
 
