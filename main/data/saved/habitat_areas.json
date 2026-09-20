@@ -1,0 +1,27 @@
+{
+  "unknown": {
+    "pixel_count": 959,
+    "percent": 4.74,
+    "area_km2": 3.08
+  },
+  "upland": {
+    "pixel_count": 772,
+    "percent": 3.82,
+    "area_km2": 2.48
+  },
+  "mesic": {
+    "pixel_count": 8916,
+    "percent": 44.06,
+    "area_km2": 28.64
+  },
+  "river": {
+    "pixel_count": 3720,
+    "percent": 18.38,
+    "area_km2": 11.95
+  },
+  "wetland": {
+    "pixel_count": 5867,
+    "percent": 29.0,
+    "area_km2": 18.85
+  }
+}
