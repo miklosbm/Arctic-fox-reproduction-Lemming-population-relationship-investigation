@@ -14,7 +14,6 @@ This study compares Arctic fox reproductive success — estimated from den activ
 main/
 ├── data/
 │   ├── saved/
-│   │   ├── .gitkeep                                              # Placeholder to keep folder in git
 │   │   ├── habitat_areas.json                                    # Calculated habitat area data
 │   │   ├── lemming_summary.csv                                   # Summarized lemming population data
 │   │   └── natal_dens_per_year.csv                                # Natal den counts per year
